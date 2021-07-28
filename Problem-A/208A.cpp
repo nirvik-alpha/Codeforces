@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+#include<iostream>
+#include<string.h>
+using  namespace std;
+
+int main()
+{
+	char s[100];
+	cin >> s;
+
+	while (s)
+	{
+		if (!(s =="WUB"))
+			cout << " " << s;
+	}
+
+}
