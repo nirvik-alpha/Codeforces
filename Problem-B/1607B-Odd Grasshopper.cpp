@@ -1,0 +1,71 @@
+
+#define   FAST                   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+
+#define tab                      "\t"
+#define Infinity  1e9
+#define MXE  1e5
+typedef long long int ll;
+typedef long  double lb;
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+const int Max = 5e6 + 10;
+const int Mod = 1e9 + 7;
+const ll Inf = 1LL << 62;
+
+ll a[Max],cnt[Max];
+
+void solve()
+{
+    ll x,n,ans;
+    cin>>x>>n;
+    if(x%2)
+    {
+        ll y=n%4;
+        if(y==1)
+        {
+            ans=x+n;
+        }
+        else if(y==2)
+            ans=x-1;
+        else if(y==3)
+            ans=x-1-n;
+        else
+            ans=x;
+    }
+    else
+    {
+        ll y=n%4;
+        if(y==1)
+        {
+            ans=x-n;
+        }
+        else if(y==2)
+            ans=x+1;
+        else if(y==3)
+            ans=x+1+n;
+        else
+            ans=x;
+    }
+    cout<<ans<<endl;
+
+}
+
+
+
+
+
+int main()
+{
+    FAST;
+    long long int t,a;
+
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+    return 0;
+}
