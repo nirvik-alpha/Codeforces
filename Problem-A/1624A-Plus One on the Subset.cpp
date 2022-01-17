@@ -2,7 +2,6 @@
 
 typedef long long int ll;
 typedef long  double lb;
-//typedef variate_generator var;
 
 #define me(arr,val) memset(arr,val,sizeof arr)
 
@@ -43,28 +42,21 @@ bool com(const pair<int, int>&i, const pair<int, int>&j)
 
 void solve()
 {
-    ll n;
-    cin>>n;
-    ll a[n];
-   ll  sum =0;
-   ll even=0 ,odd=0;
-    for(int i=0;i<n;i++)
-    {
-        cin>>a[i];
-        sum = sum+a[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]%2==0)
-            even++;
-        else
-            odd++;
+   ll n;
+   cin>>n;
+
+   ll a[n];
+   for(int i=0;i<n;i++)
+   {
+       cin>>a[i] ;
     }
 
-    if(odd==0 || (even==0 && odd%2==0 ))
-    cout<<"NO"<<endl;
-    else
-        cout<<"YES"<<endl;
+   ll x = *min_element(a,a+n);
+   ll y = *max_element(a,a+n);
+
+   cout<<(y-x)<<endl;
+
+
 
 
 
@@ -77,8 +69,8 @@ int main()
 
     cin>>t;
     while(t--)
-    {
-        solve();
+      {
+    solve();
     }
     return 0;
 }

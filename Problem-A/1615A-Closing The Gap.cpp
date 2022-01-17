@@ -27,45 +27,22 @@ bool isSubSequence(string t, string s, int m, int n)
     // If all characters of str1 were found in str2
     return (j == m);
 }
-bool compare(const pair<int, int>&i, const pair<int, int>&j)
-{
-    if(i.first<j.first)
-        return i.first<j.first;
-    if(i.second<j.second)
-        return (i.second<j.second);
-
-}
-bool com(const pair<int, int>&i, const pair<int, int>&j)
-{
-    return i.first < j.first;
-
-}
 
 void solve()
 {
-    ll n;
+    ll n,sum=0,a[10000];
     cin>>n;
-    ll a[n];
-   ll  sum =0;
-   ll even=0 ,odd=0;
+
     for(int i=0;i<n;i++)
     {
         cin>>a[i];
-        sum = sum+a[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]%2==0)
-            even++;
-        else
-            odd++;
+        sum = sum +a[i];
     }
 
-    if(odd==0 || (even==0 && odd%2==0 ))
-    cout<<"NO"<<endl;
+    if(sum%n==0)
+        cout<<"0"<<endl;
     else
-        cout<<"YES"<<endl;
-
+        cout<<"1"<<endl;
 
 
 
@@ -75,11 +52,11 @@ int main()
     FAST;
     long long int t,a;
 
-    cin>>t;
-    while(t--)
-    {
-        solve();
-    }
+       cin>>t;
+         while(t--)
+     {
+    solve();
+         }
     return 0;
 }
 

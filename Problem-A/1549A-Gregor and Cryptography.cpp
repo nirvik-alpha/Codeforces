@@ -2,28 +2,27 @@
 
 #define tab                      "\t"
 #define Infinity  1e9
+
 typedef long long int ll;
+typedef long  double lb;
+
 #include<bits/stdc++.h>
 using namespace std;
 
 
 void solve()
 {
-    ll n,c=0;
-    string s,tmp;
-    cin>>n;
-    cin>>s;
-    tmp = s;
-    sort(s.begin(),s.end());
+   ll n;
+   cin>>n;
+
+   ll x = n/2;
+
+   if(x==2)
+    cout<<"2"<<" "<<(2*2)<<endl;
+   else
+    cout<<"2"<<" "<<x<<endl;
 
 
-    for(int i=0;i<n;i++)
-    {
-        if(tmp[i]==s[i])
-            c++;
-    }
-
-    cout<<n-c<<endl;
 
 }
 

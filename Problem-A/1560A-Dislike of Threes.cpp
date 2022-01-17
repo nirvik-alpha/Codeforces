@@ -1,29 +1,43 @@
+
 #define   FAST                   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 
 #define tab                      "\t"
 #define Infinity  1e9
+
 typedef long long int ll;
+typedef long  double lb;
+
 #include<bits/stdc++.h>
 using namespace std;
 
 
+const int mx = 30;
+vector<int>adj[mx];
+bool vis[mx];
+
+
+
 void solve()
 {
-    ll n,c=0;
-    string s,tmp;
-    cin>>n;
-    cin>>s;
-    tmp = s;
-    sort(s.begin(),s.end());
+    ll k;
+    cin>>k;
 
+    vector<ll>v;
 
-    for(int i=0;i<n;i++)
+    int c=1;
+    for(int i=1; i<=10000; i++)
     {
-        if(tmp[i]==s[i])
-            c++;
-    }
 
-    cout<<n-c<<endl;
+            if((i%3==0) || (i%10==3))
+            {
+                continue;
+            }
+            else
+                v.push_back(i);
+
+
+    }
+    cout<<v[k-1]<<endl;
 
 }
 
@@ -36,8 +50,7 @@ int main()
     while(t--)
     {
         solve();
-   }
+    }
     return 0;
 }
-
 

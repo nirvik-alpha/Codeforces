@@ -2,42 +2,43 @@
 
 #define tab                      "\t"
 #define Infinity  1e9
+#define MXE  1e5
 typedef long long int ll;
+typedef long  double lb;
+
 #include<bits/stdc++.h>
 using namespace std;
 
 
+const int Max = 5e6 + 10;
+const int Mod = 1e9 + 7;
+const ll Inf = 1LL << 62;
+
+ll a[Max],cnt[Max];
+
 void solve()
 {
-    ll n,c=0;
-    string s,tmp;
-    cin>>n;
-    cin>>s;
-    tmp = s;
-    sort(s.begin(),s.end());
+  ll u ,v ;
+  cin>>u>>v;
 
-
-    for(int i=0;i<n;i++)
-    {
-        if(tmp[i]==s[i])
-            c++;
-    }
-
-    cout<<n-c<<endl;
+  cout<<-u*u<<" "<<v*v<<endl;
 
 }
+
+
+
+
 
 int main()
 {
     FAST;
     long long int t,a;
+
     cin>>t;
-    // a = 2*t;
     while(t--)
     {
         solve();
-   }
+    }
     return 0;
 }
-
 

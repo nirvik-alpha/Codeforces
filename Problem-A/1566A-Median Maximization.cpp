@@ -43,32 +43,11 @@ bool com(const pair<int, int>&i, const pair<int, int>&j)
 
 void solve()
 {
-    ll n;
-    cin>>n;
-    ll a[n];
-   ll  sum =0;
-   ll even=0 ,odd=0;
-    for(int i=0;i<n;i++)
-    {
-        cin>>a[i];
-        sum = sum+a[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]%2==0)
-            even++;
-        else
-            odd++;
-    }
+    ll n,s;
+        cin>>n>>s;
 
-    if(odd==0 || (even==0 && odd%2==0 ))
-    cout<<"NO"<<endl;
-    else
-        cout<<"YES"<<endl;
-
-
-
-
+        n=n/2+1;
+        cout<<s/n<<endl;
 }
 int main()
 {
@@ -77,8 +56,8 @@ int main()
 
     cin>>t;
     while(t--)
-    {
-        solve();
+      {
+    solve();
     }
     return 0;
 }

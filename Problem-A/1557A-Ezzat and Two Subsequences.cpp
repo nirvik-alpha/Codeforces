@@ -3,27 +3,36 @@
 #define tab                      "\t"
 #define Infinity  1e9
 typedef long long int ll;
+typedef long  double lb;
 #include<bits/stdc++.h>
 using namespace std;
 
 
 void solve()
 {
-    ll n,c=0;
-    string s,tmp;
+    ll n;
+
+    //ll a[n];
+
+   lb sum=0;
     cin>>n;
-    cin>>s;
-    tmp = s;
-    sort(s.begin(),s.end());
 
+    ll a[n];
 
-    for(int i=0;i<n;i++)
+    for( int i=0;i<n;i++)
     {
-        if(tmp[i]==s[i])
-            c++;
+        cin>>a[i];
     }
+    sort(a,a+n);
+    for( int i=0;i<n-1;i++)
+    {
+        sum =sum+a[i];
+    }
+    lb z = sum/(n-1);
+    lb y = a[n-1];
+    lb x = (y+z) ;
+    cout<<fixed<<setprecision(9)<<(x)<<endl;
 
-    cout<<n-c<<endl;
 
 }
 

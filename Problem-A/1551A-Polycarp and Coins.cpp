@@ -2,28 +2,32 @@
 
 #define tab                      "\t"
 #define Infinity  1e9
+
 typedef long long int ll;
+typedef long  double lb;
+
 #include<bits/stdc++.h>
 using namespace std;
 
 
 void solve()
 {
-    ll n,c=0;
-    string s,tmp;
+    long long int  n ;
     cin>>n;
-    cin>>s;
-    tmp = s;
-    sort(s.begin(),s.end());
 
-
-    for(int i=0;i<n;i++)
+    if(n%3==0)
+        cout<<n/3<<" "<<n/3<<endl;
+    else if(n%3==1)
     {
-        if(tmp[i]==s[i])
-            c++;
+        cout<<(n/3)+1<<" "<<n/3<<endl;
+    }
+    else if(n%3==2)
+    {
+        cout<<(n/3)<<" "<<(n/3)+1<<endl;
     }
 
-    cout<<n-c<<endl;
+
+
 
 }
 
@@ -36,7 +40,7 @@ int main()
     while(t--)
     {
         solve();
-   }
+    }
     return 0;
 }
 

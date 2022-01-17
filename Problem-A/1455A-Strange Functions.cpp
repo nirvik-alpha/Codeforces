@@ -9,21 +9,11 @@ using namespace std;
 
 void solve()
 {
-    ll n,c=0;
-    string s,tmp;
-    cin>>n;
+    string s;
     cin>>s;
-    tmp = s;
-    sort(s.begin(),s.end());
 
+    cout<<s.length()<<endl;
 
-    for(int i=0;i<n;i++)
-    {
-        if(tmp[i]==s[i])
-            c++;
-    }
-
-    cout<<n-c<<endl;
 
 }
 
