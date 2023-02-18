@@ -1,4 +1,5 @@
 
+
 ///// Font Name ---> BookMan Old Style <-----////
 #define   FAST                   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 typedef long long  ll;
@@ -18,35 +19,46 @@ bool cmp(pair<string, int>& a, pair<string, int>& b)
 
 void solve()
 {
-    ll n,k;
-    cin>>n>>k;
-    ll a[n];
-    map<ll ,ll >suru , sesh ;
-    for(int i=0;i<n;i++)
+    ll n;
+    string s;
+    cin>>n>>s;
+
+    string ans;
+    if(s[0]!='9')
     {
-        cin>>a[i];
-
-        if(suru.count(a[i])==0)
+        for(int i=0;i<n;i++)
         {
-            suru[a[i]] = i;
+            int x = s[i]-'0';
+            int y = 9 - x;
+            ans += y+'0';
         }
-        sesh[a[i]] = i;
     }
-
-    while(k--)
-    {
-        ll x,y;
-        cin>>x>>y;
-
-        if(suru.count(x)==0 || suru.count(y)==0 || suru[x] > sesh[y])
+    else
         {
-            cout<<"NO"<<endl;
+          ll c=0;
+         for(int i =n-1;i>=0;i--)
+        {
+            int x = s[i]-'0';
+           x+=c;
+           if(x>1)
+           {
+               int  y = 11- x;
+               c = 1;
+               ans += y+'0';
+           }
+           else{
+                c = 0;
+                int y = 1- x;
+                ans+= y+'0';
+           }
+
         }
-        else
-        cout<<"YES"<<endl;
-
-
+        reverse(ans.begin(),ans.end());
     }
+    cout<<ans<<endl;
+
+
+
 
 
 
@@ -73,4 +85,13 @@ int main()
 }
 
 
+/*
+1
+6
+2 9 14 15 17 21
+fsdfdsfdsdfds
+
+
+
+*/
 
